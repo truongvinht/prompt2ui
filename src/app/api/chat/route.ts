@@ -11,7 +11,7 @@ const GROQ_MODEL = process.env.GROQ_MODEL??undefined;
 
 export async function POST(req: Request) {
   const { messages }: { messages: CoreMessage[] } = await req.json();
-  console.log(systemPrompt)
+
   if (OLLAMA_MODEL !== undefined) {
     // Ollama
     const openai = createOpenAI({
